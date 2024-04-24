@@ -1,0 +1,109 @@
+package edu.iit.architecture.mda.DataStore;
+
+public class DataStore2  extends DataStore{
+    public float Rprice;
+    public float Pprice;
+    public float Dprice;
+    public int temp_a;
+    public int temp_b;
+    public int temp_c;
+    public int cash;
+    public int temp_cash;
+    public float price;
+    public int G;
+    public float total;
+
+    public float getRprice() {
+        return Rprice;
+    }
+
+    public void setRprice(float rprice) {
+        Rprice = rprice;
+    }
+
+    public float getPprice() {
+        return Pprice;
+    }
+
+    public void setPprice(float pprice) {
+        Pprice = pprice;
+    }
+
+    public float getDprice() {
+        return Dprice;
+    }
+
+    public void setDprice(float dprice) {
+        Dprice = dprice;
+    }
+
+    public int getTemp_a() {
+        return temp_a;
+    }
+
+    public void setTemp_a(int temp_a) {
+        this.temp_a = temp_a;
+    }
+
+    public int getTemp_b() {
+        return temp_b;
+    }
+
+    public void setTemp_b(int temp_b) {
+        this.temp_b = temp_b;
+    }
+
+    public int getTemp_c() {
+        return temp_c;
+    }
+
+    public void setTemp_c(int temp_c) {
+        this.temp_c = temp_c;
+    }
+
+    public int getCash() {
+        return cash;
+    }
+
+    public void setCash(int cash) {
+        this.cash = cash;
+    }
+
+    public int getTemp_cash() {
+        return temp_cash;
+    }
+
+    public void setTemp_cash(int temp_cash) {
+        this.temp_cash = temp_cash;
+    }
+
+    @Override
+    public void setPrice(int price) {
+
+    }
+
+    @Override
+    public float getPriceFloat() {
+        return 0;
+    }
+
+    public void setPrice(float price) {
+        this.price = price;
+    }
+
+    public int getG() {
+        return G;
+    }
+
+    public void setG(int g) {
+        G = g;
+    }
+
+    public float getTotal() {
+        return total;
+    }
+
+    public void setTotal(float total) {
+        this.total = total;
+    }
+}
