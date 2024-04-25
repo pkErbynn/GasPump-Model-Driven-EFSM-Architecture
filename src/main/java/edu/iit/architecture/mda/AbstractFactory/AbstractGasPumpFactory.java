@@ -1,7 +1,6 @@
 package edu.iit.architecture.mda.AbstractFactory;
 
 import edu.iit.architecture.mda.DataStore.DataStore;
-import edu.iit.architecture.mda.DataStore.DataStore2;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.CancelMsg.CancelMsg;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.DisplayMenu.DisplayMenu;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.EjectCard.EjectCard;
@@ -17,6 +16,11 @@ import edu.iit.architecture.mda.OutputProcessor.Strategy.SetPayType.SetPayType;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.SetPrice.SetPrice;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.StorePrices.StorePrices;
 
+/*
+    This class groups all ConcreteFactory classes under 1 abstract superclass
+    It defines the methods that return the GasPump specific action components which
+    all ConcreteFactories need to implement
+ */
 public abstract class AbstractGasPumpFactory {
     public abstract DataStore getDataStore();
     public abstract StorePrices getStorePrices();

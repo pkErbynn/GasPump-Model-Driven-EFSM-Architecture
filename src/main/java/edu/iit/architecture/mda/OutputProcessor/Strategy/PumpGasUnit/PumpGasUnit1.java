@@ -1,4 +1,6 @@
 package edu.iit.architecture.mda.OutputProcessor.Strategy.PumpGasUnit;
 
-public class PumpGasUnit1 {
+import edu.iit.architecture.mda.OutputProcessor.Strategy.PrintReceipt.PrintReceipt;
+
+public class PumpGasUnit1 extends PumpGasUnit {
 }

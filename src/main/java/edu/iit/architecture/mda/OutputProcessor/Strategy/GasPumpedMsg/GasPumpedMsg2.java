@@ -1,4 +1,4 @@
 package edu.iit.architecture.mda.OutputProcessor.Strategy.GasPumpedMsg;
 
-public class GasPumpedMsg2 {
+public class GasPumpedMsg2 extends GasPumpedMsg {
 }

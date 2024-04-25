@@ -1,4 +1,4 @@
 package edu.iit.architecture.mda.OutputProcessor.Strategy.SetInitialValues;
 
-public class SetInitialValues1 {
+public class SetInitialValues1 extends SetInitialValues {
 }

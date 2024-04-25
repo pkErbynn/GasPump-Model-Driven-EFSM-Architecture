@@ -1,10 +1,8 @@
 package edu.iit.architecture.mda.OutputProcessor.Strategy.StorePrices;
 
-import edu.iit.architecture.mda.OutputProcessor.OP;
-
-public class StorePrices2 extends OP {
-    @Override
-    public void storePrices(){
-        dataStore.setPrice(dataStore.getPrice());
-    }
+public class StorePrices2 extends StorePrices {
+//    @Override
+//    public void storePrices(){
+//        dataStore.setPrice(dataStore.getPrice());
+//    }
 }
