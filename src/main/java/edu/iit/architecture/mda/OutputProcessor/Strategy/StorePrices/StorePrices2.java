@@ -1,4 +1,4 @@
-package edu.iit.architecture.mda.OutputProcessor.Strategy;
+package edu.iit.architecture.mda.OutputProcessor.Strategy.StorePrices;
 
 import edu.iit.architecture.mda.OutputProcessor.OP;
 
