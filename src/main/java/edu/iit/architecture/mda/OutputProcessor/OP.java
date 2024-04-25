@@ -19,23 +19,36 @@ public abstract class OP {
         this.dataStore = dataStore;
     }
 
-    public abstract void storePrices();
+    public abstract void storePrices(); //
 
-    public void payMsg(){
+    public void payMsg(){ //
     }
 
-    public void storeCash(){
+    public void storeCash(){ //
     }
 
-    public void displayMenu(){
+    public void displayMenu(){ //
     }
 
-    public void rejectMsg(){
+    public void rejectMsg(){ //
     }
 
-    public void setPrice(){
+    public void setPrice(){ //
     }
 
-    public void setInitialValues(){
+    public void setInitialValues(){ //
     }
+
+    public void PumpGasUnit(){ //
+    }
+
+    public void GasPumpedMsg(){ //
+    }
+
+    public void PrintReceipt(){} //
+    public void CancelMsg(){}   //
+    public void ReturnCash(){} //
+    public void setPayType(){}
+    public void EjectCard(){}
+
 }

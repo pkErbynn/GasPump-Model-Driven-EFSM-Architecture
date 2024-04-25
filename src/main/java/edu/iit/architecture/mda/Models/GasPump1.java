@@ -63,6 +63,7 @@ public class GasPump1 {
 //    }
 //
 //    public void PayCash(int c){
+
 //        gasPumpMDA.payType(0);
 //    }
 //

@@ -1,4 +1,13 @@
 package edu.iit.architecture.mda.OutputProcessor.Strategy.PrintReceipt;
 
-public class PrintReceipt {
+import edu.iit.architecture.mda.DataStore.DataStore;
+
+public abstract class PrintReceipt {
+    DataStore dataStore;
+
+    public PrintReceipt(DataStore dataStore) {
+        this.dataStore = dataStore;
+    }
+
+    public abstract void printReceipt();
 }

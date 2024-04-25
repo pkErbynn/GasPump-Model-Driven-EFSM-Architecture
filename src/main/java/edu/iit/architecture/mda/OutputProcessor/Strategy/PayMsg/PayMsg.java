@@ -1,4 +1,8 @@
 package edu.iit.architecture.mda.OutputProcessor.Strategy.PayMsg;
 
-public class PayMsg {
+public abstract class PayMsg {
+    public PayMsg() {
+    }
+
+    public abstract void payMsg();
 }

@@ -1,4 +1,5 @@
 package edu.iit.architecture.mda.OutputProcessor.Strategy.EjectCard;
 
-public class EjectCard {
+public abstract class EjectCard {
+    public abstract void ejectCard();
 }

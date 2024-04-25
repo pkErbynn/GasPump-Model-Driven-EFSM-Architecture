@@ -1,14 +1,14 @@
 package edu.iit.architecture.mda.AbstractFactory;
 
 import edu.iit.architecture.mda.DataStore.DataStore;
-import edu.iit.architecture.mda.DataStore.DataStore1;
+import edu.iit.architecture.mda.DataStore.DataStoreGasPump1;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.CancelMsg.CancelMsg;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.CancelMsg.CancelMsg1;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.DisplayMenu.DisplayMenu;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.DisplayMenu.DisplayMenu1;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.EjectCard.EjectCard;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.GasPumpedMsg.GasPumpedMsg;
-import edu.iit.architecture.mda.OutputProcessor.Strategy.GetStoreCash.GetStoreCash;
+import edu.iit.architecture.mda.OutputProcessor.Strategy.StoreCash.StoreCash;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.PayMsg.PayMsg;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.PrintReceipt.PrintReceipt;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.PumpGasUnit.PumpGasUnit;
@@ -18,6 +18,7 @@ import edu.iit.architecture.mda.OutputProcessor.Strategy.SetInitialValues.SetIni
 import edu.iit.architecture.mda.OutputProcessor.Strategy.SetPayType.SetPayType;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.SetPrice.SetPrice;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.StorePrices.StorePrices;
+import edu.iit.architecture.mda.OutputProcessor.Strategy.StorePrices.StorePrices1;
 
 /*
     This class is the factory that produces the necessary driver objects for GasPump1
@@ -31,7 +32,7 @@ public class GasPumpFactory1 extends AbstractGasPumpFactory {
     private DataStore dataStore;
 
     public GasPumpFactory1(){
-        this.dataStore = new DataStore1();
+        this.dataStore = new DataStoreGasPump1();
     }
 
     @Override
@@ -41,7 +42,7 @@ public class GasPumpFactory1 extends AbstractGasPumpFactory {
 
     @Override
     public StorePrices getStorePrices() {
-        return null;
+        return new StorePrices1(this.dataStore);
     }
 
     @Override
@@ -50,7 +51,7 @@ public class GasPumpFactory1 extends AbstractGasPumpFactory {
     }
 
     @Override
-    public GetStoreCash getGetStoreCash() {
+    public StoreCash getGetStoreCash() {
         return null;
     }
 

@@ -5,7 +5,7 @@ import edu.iit.architecture.mda.OutputProcessor.Strategy.CancelMsg.CancelMsg;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.DisplayMenu.DisplayMenu;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.EjectCard.EjectCard;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.GasPumpedMsg.GasPumpedMsg;
-import edu.iit.architecture.mda.OutputProcessor.Strategy.GetStoreCash.GetStoreCash;
+import edu.iit.architecture.mda.OutputProcessor.Strategy.StoreCash.StoreCash;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.PayMsg.PayMsg;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.PrintReceipt.PrintReceipt;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.PumpGasUnit.PumpGasUnit;
@@ -25,7 +25,7 @@ public abstract class AbstractGasPumpFactory {
     public abstract DataStore getDataStore();
     public abstract StorePrices getStorePrices();
     public abstract PayMsg getPayMsg();
-    public abstract GetStoreCash getGetStoreCash();
+    public abstract StoreCash getGetStoreCash();
     public abstract DisplayMenu getDisplayMenu();
     public abstract RejectMsg getRejectMsg();
     public abstract SetPrice getSetPrice();
