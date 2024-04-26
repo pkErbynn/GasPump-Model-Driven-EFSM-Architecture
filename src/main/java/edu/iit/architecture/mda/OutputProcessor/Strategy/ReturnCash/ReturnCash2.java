@@ -1,8 +1,7 @@
 package edu.iit.architecture.mda.OutputProcessor.Strategy.ReturnCash;
 
-import edu.iit.architecture.mda.DataStore.DataStore;
-import edu.iit.architecture.mda.DataStore.DataStoreGasPump1;
-import edu.iit.architecture.mda.DataStore.DataStoreGasPump2;
+import edu.iit.architecture.mda.PlatformData.DataStore;
+import edu.iit.architecture.mda.PlatformData.DataStoreGasPump2;
 
 /*
     GasPump2 ReturnCash action responsible for returning the outstanding amount of cash (if any)
@@ -21,10 +20,10 @@ public class ReturnCash2 extends ReturnCash {
     @Override
     public void returnCash() {
         DataStoreGasPump2 d = (DataStoreGasPump2) dataStore;
-        float cash_return = d.cash - d.total;
-        if (cash_return > 0) {
-            System.out.println("Cash to return: $" + cash_return);
-            System.out.println("Returning $" + cash_return);
+        float currCash = d.cash - d.total;
+        if (currCash > 0) {
+            System.out.println("Cash to return: $" + currCash);
+            System.out.println("Returning $" + currCash);
         } else {
             System.out.println("No cash to return");
         }

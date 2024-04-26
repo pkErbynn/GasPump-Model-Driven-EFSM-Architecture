@@ -1,7 +1,7 @@
 package edu.iit.architecture.mda.OutputProcessor;
 
 import edu.iit.architecture.mda.AbstractFactory.AbstractGasPumpFactory;
-import edu.iit.architecture.mda.DataStore.DataStore;
+import edu.iit.architecture.mda.PlatformData.DataStore;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.CancelMsg.CancelMsg;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.DisplayMenu.DisplayMenu;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.EjectCard.EjectCard;
@@ -62,25 +62,15 @@ public class OP {
     }
 
 
-    /*
-     *  Meta-actions (implemented using Strategy pattern)
-     */
-
-//    public OP(){}
-//
-//    public OP(DataStore dataStore){
-//        this.dataStore = dataStore;
-//    }
-//
-//    public DataStore getDataStore() {
-//        return dataStore;
-//    }
+    // Meta-actions (implemented using Strategy pattern)
 
     public void setDataStore(DataStore dataStore) {
         this.dataStore = dataStore;
     }
 
-    public void storePrices(){}; //
+    public void storePrices(){
+        this.storePrices.storePrices();
+    }; //
 
     public void payMsg(){ //
         this.payMsg.payMsg();
@@ -106,27 +96,27 @@ public class OP {
         this.setInitialValues.setInitialValues();
     }
 
-    public void PumpGasUnit(){ //
+    public void pumpGasUnit(){ //
         this.pumpGasUnit.pumpGasUnit();
     }
 
-    public void GasPumpedMsg(){ //
+    public void gasPumpedMsg(){ //
         this.gasPumpedMsg.gasPumpedMsg();
     }
 
-    public void PrintReceipt(){
+    public void printReceipt(){
         this.printReceipt.printReceipt();
     } //
-    public void CancelMsg(){
+    public void cancelMsg(){
         this.cancelMsg.cancelMsg();
     }
-    public void ReturnCash(){
+    public void returnCash(){
         this.returnCash.returnCash();
     } //
     public void setPayType(int t){
         this.setPayType.setPayType(t);
     }
-    public void EjectCard(){
+    public void ejectCard(){
         this.ejectCard.ejectCard();
     }
 

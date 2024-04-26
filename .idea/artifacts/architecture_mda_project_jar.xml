@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="architecture-mda-project:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/architecture_mda_project_jar</output-path>
+    <root id="archive" name="architecture-mda-project.jar">
+      <element id="module-output" name="architecture-mda-project" />
+    </root>
+  </artifact>
+</component>

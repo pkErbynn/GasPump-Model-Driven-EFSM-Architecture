@@ -1,81 +1,116 @@
 package edu.iit.architecture.mda.Models;
 
 import edu.iit.architecture.mda.AbstractFactory.AbstractGasPumpFactory;
-import edu.iit.architecture.mda.DataStore.DataStore;
-import edu.iit.architecture.mda.GasPumpMDAEFSM.GasPumpMDA;
 import edu.iit.architecture.mda.OutputProcessor.OP;
+import edu.iit.architecture.mda.PlatformData.DataStore;
+import edu.iit.architecture.mda.GasPumpMDAEFSM.GasPumpMDA;
+import edu.iit.architecture.mda.PlatformData.DataStoreGasPump1;
+import edu.iit.architecture.mda.PlatformData.DataStoreGasPump2;
+
+/*
+    This class is the InputProcessor for GasPump1
+ */
 
 public class GasPump1 {
-    private GasPumpMDA gasPumpMDA;
+    private GasPumpMDA mdaEfsm;
     private DataStore dataStore;
-    private AbstractGasPumpFactory abstractGasPumpFactory;
 
-    public GasPump1(AbstractGasPumpFactory abstractGasPumpFactory){
-        this.abstractGasPumpFactory = abstractGasPumpFactory;
+    public GasPump1(AbstractGasPumpFactory af){
+        this.dataStore = af.getDataStore();
+        this.mdaEfsm = new GasPumpMDA();
+        OP op = new OP(af);
+        this.mdaEfsm.setOp(op);
     }
 
-    public GasPump1(AbstractGasPumpFactory abstractGasPumpFactory, DataStore dataStore, GasPumpMDA gasPumpMDA){
-        this.abstractGasPumpFactory = abstractGasPumpFactory;
-        this.dataStore = dataStore;
-        this.gasPumpMDA = gasPumpMDA;
+    // unused
+    public void printMenuOperations() {
+        System.out.println(
+                "*********************************************************************" +
+                        "\nSelect operation: " +
+                        "\n(0) Activate(int a) " +
+                        "\n(1) Start " +
+                        "(2) PayCredit " +
+                        "(3) Approve " +
+                        "(4) Reject" +
+                        "\n(5) Regular " +
+                        "(6) Diesel " +
+                        "(7) Cancel " +
+                        "\n(8) StartPump " +
+                        "(9) PumpGallon " +
+                        "(x) StopPump " +
+                        "{q} Quit the program " +
+                        "\n*********************************************************************"
+        );
     }
 
-    public void setGasPumpMDA(GasPumpMDA gasPumpMDA) {
-        this.gasPumpMDA = gasPumpMDA;
-    }
 
-    public void setDataStore(DataStore dataStore) {
-        this.dataStore = dataStore;
-    }
+        /*
+        Verify  input parameters for on activate(), and call the
+        activate() on meta-event MDA model
 
-    public GasPumpMDA getGasPumpMDA() {
-        return gasPumpMDA;
-    }
+        If input is invalid, print a failed message
 
-    public DataStore getDataStore() {
-        return dataStore;
-    }
+        @param a: price of Regular gas
+     */
 
     public void activate(int a){
-        dataStore.setTemp_a(a);
-//        op.storePrices();
-        gasPumpMDA.Activate();
+        if (a > 0){
+            DataStoreGasPump1 ds1 = (DataStoreGasPump1) this.dataStore;
+            ds1.temp_a = a;
+            mdaEfsm.activate();
+        }
+        else {
+            System.out.println("Failed to activate. Invalid input.");
+        }
     }
 
-//    public void start(){
-//        gasPumpMDA.Start();
-//    }
-//
-//    public void payCredit(){
-//        gasPumpMDA.payType(1);
-//    }
-//
-//    public void Reject(){
-//        gasPumpMDA.reject();
-//    }
-//
-//    public void Cancel(){
-//        gasPumpMDA.cancel();
-//    }
-//
-//    public void approved(){
-//        gasPumpMDA.approved();
-//    }
-//
-//    public void PayCash(int c){
+    // call start on mda-efsm model
+    public void start(){
+        mdaEfsm.start();
+    }
 
-//        gasPumpMDA.payType(0);
-//    }
-//
-//    public void StartPump(){
-//        gasPumpMDA.startPump();
-//    }
-//
-//    public void Pump(){
-//        gasPumpMDA.pump();
-//    }
-//
-//    public void stopPump(){
-//        gasPumpMDA.stopPump();
-//    }
+    // call payType meta-event on efsm model on mda-efsm model
+    // credit payment type is 1
+    public void payCredit(){
+        mdaEfsm.payType(1);
+    }
+
+    // call reject() on mda-efsm model
+    public void reject(){
+        mdaEfsm.reject();
+    }
+
+    // call cancel() on mda-efsm model
+    public void cancel(){
+        mdaEfsm.cancel();
+    }
+
+    // call approved() on mda-efsm model
+    public void approved(){
+        mdaEfsm.approved();
+    }
+
+    // call payType() on mda-efsm model
+    public void payCash(int c){
+        if(c>0){
+            mdaEfsm.payType(0);
+        }
+    }
+
+    // call StartPump() on mda-efsm model
+    public void startPump(){
+        mdaEfsm.startPump();
+    }
+
+    // call pump() on mda-efsm model
+    public void pump(){
+        // contitions
+        mdaEfsm.pump();
+    }
+
+    // call stopPump() on mda-efsm model
+    public void stopPump(){
+        mdaEfsm.stopPump();
+        mdaEfsm.receipt();
+    }
 }

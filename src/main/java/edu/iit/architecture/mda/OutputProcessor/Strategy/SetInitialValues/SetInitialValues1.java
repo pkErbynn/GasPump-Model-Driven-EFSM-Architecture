@@ -1,7 +1,7 @@
 package edu.iit.architecture.mda.OutputProcessor.Strategy.SetInitialValues;
 
-import edu.iit.architecture.mda.DataStore.DataStore;
-import edu.iit.architecture.mda.DataStore.DataStoreGasPump1;
+import edu.iit.architecture.mda.PlatformData.DataStore;
+import edu.iit.architecture.mda.PlatformData.DataStoreGasPump1;
 
 public class SetInitialValues1 extends SetInitialValues {
     public SetInitialValues1(DataStore dataStore) {

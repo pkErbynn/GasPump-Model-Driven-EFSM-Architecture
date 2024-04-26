@@ -1,7 +1,7 @@
 package edu.iit.architecture.mda.OutputProcessor.Strategy.StorePrices;
 
-import edu.iit.architecture.mda.DataStore.DataStore;
-import edu.iit.architecture.mda.DataStore.DataStoreGasPump2;
+import edu.iit.architecture.mda.PlatformData.DataStore;
+import edu.iit.architecture.mda.PlatformData.DataStoreGasPump2;
 
 public class StorePrices2 extends StorePrices {
     public StorePrices2(DataStore dataStore) {

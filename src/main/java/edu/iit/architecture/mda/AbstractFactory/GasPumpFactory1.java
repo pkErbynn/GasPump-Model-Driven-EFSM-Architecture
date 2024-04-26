@@ -1,7 +1,18 @@
 package edu.iit.architecture.mda.AbstractFactory;
 
-import edu.iit.architecture.mda.DataStore.DataStore;
-import edu.iit.architecture.mda.DataStore.DataStoreGasPump1;
+import edu.iit.architecture.mda.OutputProcessor.Strategy.EjectCard.EjectCard1;
+import edu.iit.architecture.mda.OutputProcessor.Strategy.GasPumpedMsg.GasPumpedMsg1;
+import edu.iit.architecture.mda.OutputProcessor.Strategy.PayMsg.PayMsg1;
+import edu.iit.architecture.mda.OutputProcessor.Strategy.PrintReceipt.PrintReceipt1;
+import edu.iit.architecture.mda.OutputProcessor.Strategy.PumpGasUnit.PumpGasUnit1;
+import edu.iit.architecture.mda.OutputProcessor.Strategy.RejectMsg.RejectMsg1;
+import edu.iit.architecture.mda.OutputProcessor.Strategy.ReturnCash.ReturnCash1;
+import edu.iit.architecture.mda.OutputProcessor.Strategy.SetInitialValues.SetInitialValues1;
+import edu.iit.architecture.mda.OutputProcessor.Strategy.SetPayType.SetPayType1;
+import edu.iit.architecture.mda.OutputProcessor.Strategy.SetPrice.SetPrice1;
+import edu.iit.architecture.mda.OutputProcessor.Strategy.StoreCash.StoreCash1;
+import edu.iit.architecture.mda.PlatformData.DataStore;
+import edu.iit.architecture.mda.PlatformData.DataStoreGasPump1;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.CancelMsg.CancelMsg;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.CancelMsg.CancelMsg1;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.DisplayMenu.DisplayMenu;
@@ -19,6 +30,7 @@ import edu.iit.architecture.mda.OutputProcessor.Strategy.SetPayType.SetPayType;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.SetPrice.SetPrice;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.StorePrices.StorePrices;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.StorePrices.StorePrices1;
+import edu.iit.architecture.mda.PlatformData.DataStoreGasPump2;
 
 /*
     This class is the factory that produces the necessary driver objects for GasPump1
@@ -47,47 +59,47 @@ public class GasPumpFactory1 extends AbstractGasPumpFactory {
 
     @Override
     public PayMsg getPayMsg() {
-        return null;
+        return new PayMsg1();
     }
 
     @Override
     public StoreCash getGetStoreCash() {
-        return null;
+        return new StoreCash1(this.dataStore);
     }
 
     @Override
     public DisplayMenu getDisplayMenu() {
-        return new DisplayMenu1();
+        return new DisplayMenu1(this.dataStore);
     }
 
     @Override
     public RejectMsg getRejectMsg() {
-        return null;
+        return new RejectMsg1();
     }
 
     @Override
     public SetPrice getSetPrice() {
-        return null;
+        return new SetPrice1(this.dataStore);
     }
 
     @Override
     public SetInitialValues getSetInitialValues() {
-        return null;
+        return new SetInitialValues1(this.dataStore);
     }
 
     @Override
     public PumpGasUnit getPumpedGasUnit() {
-        return null;
+        return new PumpGasUnit1(this.dataStore);
     }
 
     @Override
     public GasPumpedMsg getGasPumpedMsg() {
-        return null;
+        return new GasPumpedMsg1(this.dataStore);
     }
 
     @Override
     public PrintReceipt getPrintReceipt() {
-        return null;
+        return new PrintReceipt1(this.dataStore);
     }
 
     @Override
@@ -97,16 +109,16 @@ public class GasPumpFactory1 extends AbstractGasPumpFactory {
 
     @Override
     public ReturnCash getReturnCash() {
-        return null;
+        return new ReturnCash1();
     }
 
     @Override
     public SetPayType getSetPayType() {
-        return null;
+        return new SetPayType1(this.dataStore);
     }
 
     @Override
     public EjectCard getEjectCard() {
-        return null;
+        return new EjectCard1();
     }
 }

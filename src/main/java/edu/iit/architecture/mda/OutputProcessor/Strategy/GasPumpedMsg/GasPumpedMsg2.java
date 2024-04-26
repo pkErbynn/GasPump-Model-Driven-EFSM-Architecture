@@ -1,8 +1,7 @@
 package edu.iit.architecture.mda.OutputProcessor.Strategy.GasPumpedMsg;
 
-import edu.iit.architecture.mda.DataStore.DataStore;
-import edu.iit.architecture.mda.DataStore.DataStoreGasPump1;
-import edu.iit.architecture.mda.DataStore.DataStoreGasPump2;
+import edu.iit.architecture.mda.PlatformData.DataStore;
+import edu.iit.architecture.mda.PlatformData.DataStoreGasPump2;
 
 
 public class GasPumpedMsg2 extends GasPumpedMsg {

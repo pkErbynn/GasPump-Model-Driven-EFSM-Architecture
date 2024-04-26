@@ -1,7 +1,7 @@
 package edu.iit.architecture.mda.OutputProcessor.Strategy.ReturnCash;
 
 
-import edu.iit.architecture.mda.DataStore.DataStore;
+import edu.iit.architecture.mda.PlatformData.DataStore;
 
 /*
     Abstract ReturnCash action strategy

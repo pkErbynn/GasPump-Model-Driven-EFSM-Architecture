@@ -1,6 +1,6 @@
 package edu.iit.architecture.mda.OutputProcessor.Strategy.StorePrices;
 
-import edu.iit.architecture.mda.DataStore.DataStore;
+import edu.iit.architecture.mda.PlatformData.DataStore;
 
 /*
     Abstract StorePrices action strategy

@@ -1,11 +1,13 @@
-package edu.iit.architecture.mda.DataStore;
+package edu.iit.architecture.mda.PlatformData;
 
 public class DataStoreGasPump2 extends DataStore{
+    // these fields should be private and accessed via getters and setter
+    // but due simplicity, it will be public
     public float Rprice;
     public float Pprice;
     public float Dprice;
 
-    public int cash;
+    public float cash;
     public float price;
     public int G;
     public float total;
@@ -13,10 +15,10 @@ public class DataStoreGasPump2 extends DataStore{
 
 
     // temporary variables
-    public int temp_a;  // a
-    public int temp_b;
-    public int temp_c;
-    public int temp_cash;
+    public float temp_a;  // a
+    public float temp_b;
+    public float temp_c;
+    public float temp_cash;
 
     // can accessed through getters and setters
 

@@ -1,7 +1,7 @@
 package edu.iit.architecture.mda.OutputProcessor.Strategy.SetPrice;
 
-import edu.iit.architecture.mda.DataStore.DataStore;
-import edu.iit.architecture.mda.DataStore.DataStoreGasPump2;
+import edu.iit.architecture.mda.PlatformData.DataStore;
+import edu.iit.architecture.mda.PlatformData.DataStoreGasPump2;
 
 public class SetPrice2 extends SetPrice {
     public SetPrice2(DataStore dataStore) {
@@ -25,7 +25,7 @@ public class SetPrice2 extends SetPrice {
             d.price = d.Pprice;
             d.gasType = "Regular";
         }
-        else if(g == 3){
+        else if(g == 2){
             d.price = d.Dprice;
             d.gasType = "Diesel";
         }

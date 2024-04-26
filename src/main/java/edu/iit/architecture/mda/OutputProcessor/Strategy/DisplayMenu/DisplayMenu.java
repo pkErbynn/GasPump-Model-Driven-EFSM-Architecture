@@ -1,6 +1,6 @@
 package edu.iit.architecture.mda.OutputProcessor.Strategy.DisplayMenu;
 
-import edu.iit.architecture.mda.DataStore.DataStore;
+import edu.iit.architecture.mda.PlatformData.DataStore;
 
 public abstract class DisplayMenu {
     DataStore datastore;

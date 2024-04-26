@@ -1,6 +1,6 @@
 package edu.iit.architecture.mda.OutputProcessor.Strategy.PumpGasUnit;
 
-import edu.iit.architecture.mda.DataStore.DataStore;
+import edu.iit.architecture.mda.PlatformData.DataStore;
 
 public abstract class PumpGasUnit {
     DataStore dataStore;

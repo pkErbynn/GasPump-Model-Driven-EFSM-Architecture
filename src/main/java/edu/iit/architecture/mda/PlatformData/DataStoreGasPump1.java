@@ -1,6 +1,9 @@
-package edu.iit.architecture.mda.DataStore;
+package edu.iit.architecture.mda.PlatformData;
 
 public class DataStoreGasPump1 extends DataStore{
+    // these fields should be private and accessed via getters and setter
+    // but due simplicity, it will be public
+
     public int price;
     public int cash;
     public int total;

@@ -1,6 +1,6 @@
 package edu.iit.architecture.mda.AbstractFactory;
 
-import edu.iit.architecture.mda.DataStore.DataStore;
+import edu.iit.architecture.mda.PlatformData.DataStore;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.CancelMsg.CancelMsg;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.DisplayMenu.DisplayMenu;
 import edu.iit.architecture.mda.OutputProcessor.Strategy.EjectCard.EjectCard;

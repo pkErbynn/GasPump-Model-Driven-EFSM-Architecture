@@ -1,7 +1,6 @@
 package edu.iit.architecture.mda.OutputProcessor.Strategy.SetPayType;
 
-import edu.iit.architecture.mda.DataStore.DataStore;
-import edu.iit.architecture.mda.OutputProcessor.Strategy.SetPrice.SetPrice1;
+import edu.iit.architecture.mda.PlatformData.DataStore;
 
 public abstract class SetPayType {
     DataStore dataStore;
