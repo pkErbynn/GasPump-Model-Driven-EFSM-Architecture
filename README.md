@@ -6,7 +6,7 @@ The goal of this project is to design and implement two different gas pump compo
 
 The project is divided into two phases:
 1.	**MDA-EFSM Design** – Designing the behavior of GP components using a unified Extended Finite State Machine (EFSM) model.
-   - to capture the generalized behavior of both gas pump components, separating system behavior from implementation specifics, allowing scalability and flexibility.
+    - to capture the generalized behavior of both gas pump components, separating system behavior from implementation specifics, allowing scalability and flexibility.
 2.	**Design & Implementation** – Applying OO design principles to implement the GP components based on the EFSM model using design patterns.
     -  to ensure modularity, flexibility, and scalability using 
       - **State Pattern** – Manages the gas pump’s state transitions (e.g., Idle, Active, Pumping, Stopped).
