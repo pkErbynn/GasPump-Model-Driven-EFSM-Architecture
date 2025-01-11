@@ -1,7 +1,9 @@
 # Gas Pump System Architecture Design and Implementation
 
 ## Goal:
-The goal of this project is to design and implement two different gas pump components (GP-1 and GP-2) using the Model-Driven Architecture (MDA) framework. The core design is built upon an **Extended Finite State Machine (EFSM)** model and **Object-Oriented (OO) design patterns** to capture the behavior of both gas pump components in a generalized, decoupled structure.
+The goal of this project is to design and implement two different gas pump components (GP-1 and GP-2) using the Model-Driven Architecture (MDA) framework. 
+
+The core design is built upon an **Extended Finite State Machine (EFSM)** model and **Object-Oriented (OO) design patterns** to capture the behavior of both gas pump components in a generalized, decoupled structure.
 
 
 The project is divided into two phases:
@@ -72,7 +74,7 @@ Leverages the following design patterns and MDSA-EFSM model.
 
 
 ## Implementation File Structure
-
+<pre>
 ---- | /AbstractFactory
      | /GasPumpMDAEFSM
      | /Models
@@ -80,5 +82,6 @@ Leverages the following design patterns and MDSA-EFSM model.
      | /PlatformData
      | /State
      | Main.java
+<pre>
 
 Full implementation @ [./src/main/java/edu/iit/architecture /mda](https://github.com/pkErbynn/software-architecture-gasPump-EFSM-design/tree/main/src/main/java/edu/iit/architecture/mda)
