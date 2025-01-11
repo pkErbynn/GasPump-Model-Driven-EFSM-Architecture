@@ -1,23 +1,22 @@
 # Gas Pump System Architecture Design and Implementation
 
 ## Goal:
-The goal of this project is to design and implement two different gas pump components (GP-1 and GP-2) using the Model-Driven Architecture (MDA) framework. The core design is built upon an Extended Finite State Machine (EFSM) model and Object-Oriented (OO) design patterns to capture the behavior of both gas pump components in a generalized, decoupled structure.
+The goal of this project is to design and implement two different gas pump components (GP-1 and GP-2) using the Model-Driven Architecture (MDA) framework. The core design is built upon an **Extended Finite State Machine (EFSM)** model and **Object-Oriented (OO) design patterns** to capture the behavior of both gas pump components in a generalized, decoupled structure.
 
 
 The project is divided into two phases:
-1.	MDA-EFSM Design – Designing the behavior of GP components using a unified Extended Finite State Machine (EFSM) model.
+1.	**MDA-EFSM Design** – Designing the behavior of GP components using a unified Extended Finite State Machine (EFSM) model.
    - to capture the generalized behavior of both gas pump components, separating system behavior from implementation specifics, allowing scalability and flexibility.
-2.	Design & Implementation – Applying OO design principles to implement the GP components based on the EFSM model using design patterns.
+2.	**Design & Implementation** – Applying OO design principles to implement the GP components based on the EFSM model using design patterns.
     -  to ensure modularity, flexibility, and scalability using 
-      - State Pattern – Manages the gas pump’s state transitions (e.g., Idle, Active, Pumping, Stopped).
-      - Strategy Pattern – Encapsulates various fuel types and payment methods, allowing interchangeable strategies.
-      - Abstract Factory Pattern – Creates families of related objects (GP-1 and GP-2 components) without specifying concrete classes.
+      - **State Pattern** – Manages the gas pump’s state transitions (e.g., Idle, Active, Pumping, Stopped).
+      - **Strategy Pattern** – Encapsulates various fuel types and payment methods, allowing interchangeable strategies.
+      - **Abstract Factory Pattern** – Creates families of related objects (GP-1 and GP-2 components) without specifying concrete classes.
 
-## Project Components
+## Project Components:
 
 ### Gas Pump 1 (GP-1)
-
-GP-1 gas pump supports both cash and credit card payments.
+- GP-1 gas pump supports **both cash and credit card payments.**
 
 ![class_diagram](./Project%20Description/gp1.png)
 
@@ -34,7 +33,7 @@ Supported Operations:
 -	StopPump(): Stops fuel dispensing.
 
 ### Gas Pump 2 (GP-2)
-GP-2 offers more advanced features, supporting Regular, Premium, and Diesel fuel types and only cash payments.
+- GP-2 offers more advanced features, **supporting Regular, Premium, and Diesel fuel types** and **only cash payments.**
 
 ![class_diagram](./Project%20Description/gp2.png)
 
@@ -66,11 +65,20 @@ Supported Operations:
 | **Pump Operation**   | `Pump()` dispenses 1 liter                        | `PumpGallon()` dispenses 1 gallon           |
 | **Payment Validation** | Supports credit card approval/rejection           | No credit card support                      |
 
-### Unified Class Diagram for GasPump MDA components
-Leverages the following design patterns:
-- State,
-- Strategy and
-- Abstract Factory
+## Unified Class Diagram for GasPump MDA components
+Leverages the following design patterns and MDSA-EFSM model.
 
 ![class_diagram](./Project%20Description/unified-class-diagram.png)
 
+
+## Implementation File Structure
+
+---- | /AbstractFactory
+     | /GasPumpMDAEFSM
+     | /Models
+     | /OutProcessor
+     | /PlatformData
+     | /State
+     | Main.java
+
+Full implementation @ [./src/main/java/edu/iit/architecture /mda](https://github.com/pkErbynn/software-architecture-gasPump-EFSM-design/tree/main/src/main/java/edu/iit/architecture/mda)
