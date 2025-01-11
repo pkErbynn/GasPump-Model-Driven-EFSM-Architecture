@@ -82,6 +82,6 @@ Leverages the following design patterns and MDSA-EFSM model.
      | /PlatformData
      | /State
      | Main.java
-<pre>
+</pre>
 
 Full implementation @ [./src/main/java/edu/iit/architecture /mda](https://github.com/pkErbynn/software-architecture-gasPump-EFSM-design/tree/main/src/main/java/edu/iit/architecture/mda)
